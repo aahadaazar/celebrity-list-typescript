@@ -11,10 +11,9 @@ function App() {
       name: 'Aahad Aazar',
       age: 20,
       url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLZRikTv9DxCom-Q9kpYt5vCzyKXtNVxGrAA&usqp=CAU',
-      note: 'Hello'
+      note: 'Hello',
     },
   ]);
-
   return (
     <div className="App">
       <h1>{'This is my celebrity list!!!'}</h1>

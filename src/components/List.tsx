@@ -16,13 +16,13 @@ const List: React.FC<ListProps> = ({ listItems }) => {
         </div>
         <p>{celebrity.age}</p>
         <p className='List-note'>{celebrity.note}</p>
-      </li>
-    })
-  }
+      </li>;
+    });
+  };
   return (
     <div>{renderList()}</div>
-  )
-}
+  );
+};
 
 
-export default List
+export default List;

@@ -10,23 +10,23 @@ const initialInputState = {
   name: '',
   age: '',
   url: '',
-  note: ''
-}
+  note: '',
+};
 
 const AddToList: React.FC<AddToListProps> = ({ celebrityList, setCelebrityList }) => {
 
-  const [input, setInput] = useState(initialInputState)
+  const [input, setInput] = useState(initialInputState);
 
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setInput({
       ...input,
-      [e.target.name]: e.target.value
-    })
-  }
+      [e.target.name]: e.target.value,
+    });
+  };
   const handleAddCelebrity = (): void => {
     if (!input.name || !input.age || !input.url) {
-      return
+      return;
     }
     setCelebrityList([
       ...celebrityList,
@@ -34,11 +34,11 @@ const AddToList: React.FC<AddToListProps> = ({ celebrityList, setCelebrityList }
         name: input.name,
         age: parseInt(input.age),
         url: input.url,
-        note: input.note
-      }
-    ])
+        note: input.note,
+      },
+    ]);
     setInput(initialInputState);
-  }
+  };
 
 
   return (
@@ -80,8 +80,8 @@ const AddToList: React.FC<AddToListProps> = ({ celebrityList, setCelebrityList }
         Add To List
       </button>
     </div>
-  )
-}
+  );
+};
 
 
-export default AddToList
+export default AddToList;
